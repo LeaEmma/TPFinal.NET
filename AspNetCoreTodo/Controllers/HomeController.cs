@@ -29,6 +29,13 @@ namespace AspNetCoreTodo.Controllers
             return View();
         }
 
+        public IActionResult Offices()
+        {
+            ViewData["Message"] = "Nuestras oficinas.";
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

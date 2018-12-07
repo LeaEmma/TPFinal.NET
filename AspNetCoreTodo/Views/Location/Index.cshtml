@@ -1,0 +1,29 @@
+    @model LocationViewModel
+    @using Humanizer
+    @{
+        ViewData["Title"] = "Manage your location list";
+    }
+    <div class="panel panel-default todo-panel">
+        <div class="panel-heading">@ViewData["Title"]</div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                <td>&#x2714;</td>
+                <td>Location</td>
+                <td>Latitud</td>
+                <td>Longitud</td>
+                </tr>
+            </thead>
+                @foreach (var item in Model.Location)
+                {
+                    <tr>
+                        <td>@item.Location</td>
+                        <td>@item.Latitud</td>
+                        <td>@item.Longitud</td>
+                    </tr>
+                }
+        </table>
+        <div class="panel-footer add-item-form">
+            @await Html.PartialAsync("AddItemPartial", new LocationItem())
+        </div>
+    </div>
