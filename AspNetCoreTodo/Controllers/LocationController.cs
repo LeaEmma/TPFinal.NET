@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreTodo.Controllers
 {
-    public class LocationControllers : Controllers
+    public class LocationControllers : Controller
     {
         private readonly ILocationItemService _locationItemService;
         public LocationController(ILocationItemService locationItemService)
